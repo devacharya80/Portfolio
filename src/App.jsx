@@ -15,6 +15,7 @@ export const LINKS = {
   discover: PROFILE.discover,
   linkedin: PROFILE.linkedin,
   email: PROFILE.email,
+  resume: PROFILE.resume,
 };
 
 export default function App() {
@@ -22,8 +23,15 @@ export default function App() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="min-h-screen bg-paper text-ink font-sans">
-      <Navbar items={NAV_ITEMS} menuOpen={menuOpen} setMenuOpen={setMenuOpen} onNavigate={closeMenu} github={LINKS.github} />
+    <div className="min-h-screen bg-paper font-sans text-ink">
+      <Navbar
+        items={NAV_ITEMS}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        onNavigate={closeMenu}
+        github={LINKS.github}
+        resume={LINKS.resume}
+      />
       <main id="top">
         <Hero profile={PROFILE} links={LINKS} />
         <ProofStrip />
@@ -31,9 +39,9 @@ export default function App() {
         <SkillsSection skills={SKILLS} />
         <AboutSection profile={PROFILE} facts={ABOUT_FACTS} />
         <BuildSection />
-        <ContactSection email={LINKS.email} github={LINKS.github} />
+        <ContactSection email={LINKS.email} github={LINKS.github} linkedin={LINKS.linkedin} />
       </main>
-      <Footer github={LINKS.github} email={LINKS.email} />
+      <Footer github={LINKS.github} email={LINKS.email} linkedin={LINKS.linkedin} />
     </div>
   );
 }
