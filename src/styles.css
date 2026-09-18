@@ -5,25 +5,79 @@
 
 @layer base {
   * { box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #f7f7f4; }
-  a { color: inherit; text-decoration: none; }
+
+  body {
+    margin: 0;
+    background: #f7f7f4;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1d5d52;
+    outline-offset: 3px;
+  }
 }
+
 @layer components {
-  .section-wrap { @apply mx-auto max-w-[1180px] px-[18px] py-[78px] sm:px-6 sm:py-[112px]; }
-  .eyebrow { @apply mb-[18px] text-[12px] font-bold uppercase tracking-[.16em] text-[#6d6d68]; }
-  .section-title { @apply max-w-[700px] font-display text-[38px] font-bold leading-[1.05] tracking-[-.055em] sm:text-[56px]; }
-  .hero-title { @apply font-display text-[40px] font-bold leading-[1.05] tracking-[-.055em] sm:text-[clamp(48px,6vw,84px)]; }
-  .hero-title span { @apply text-[#777770]; }
-  .text-link { @apply inline-flex items-center gap-2 border-b border-[#bdbdb5] pb-1 text-[13px] font-bold; }
-  .dot { @apply h-[7px] w-[7px] rounded-full bg-[#85857e]; }
+  .section-wrap {
+    @apply mx-auto max-w-[1180px] px-[18px] py-[72px] sm:px-6 sm:py-[108px];
+  }
+
+  .eyebrow {
+    @apply mb-[18px] text-[12px] font-bold uppercase tracking-[.16em] text-[#6d6d68];
+  }
+
+  .section-title {
+    @apply max-w-[700px] font-display text-[38px] font-bold leading-[1.05] tracking-[-.055em] sm:text-[56px];
+  }
+
+  .hero-title {
+    @apply font-display text-[40px] font-bold leading-[1.03] tracking-[-.055em] sm:text-[clamp(48px,6vw,84px)];
+  }
+
+  .hero-title span {
+    @apply text-[#777770];
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 border-b border-[#bdbdb5] pb-1 text-[13px] font-bold;
+  }
+
+  .dot {
+    @apply h-[7px] w-[7px] rounded-full bg-[#85857e];
+  }
+
+  .focus-ring {
+    @apply rounded-sm;
+  }
 }
+
 @layer utilities {
   .font-display { font-family: "Space Grotesk", sans-serif; }
   .font-sans { font-family: "DM Sans", sans-serif; }
 }
+
 .bg-map {
-  background: linear-gradient(26deg,rgba(39,72,61,.09) 0 8%,transparent 8% 100%),
-    linear-gradient(106deg,transparent 0 42%,rgba(29,93,82,.12) 42% 45%,transparent 45% 100%),
-    repeating-linear-gradient(0deg,transparent 0 34px,rgba(75,75,68,.12) 35px,transparent 36px);
+  background:
+    linear-gradient(26deg, rgba(39,72,61,.09) 0 8%, transparent 8% 100%),
+    linear-gradient(106deg, transparent 0 42%, rgba(29,93,82,.12) 42% 45%, transparent 45% 100%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(75,75,68,.12) 35px, transparent 36px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
