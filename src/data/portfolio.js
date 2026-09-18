@@ -4,12 +4,13 @@ export const PROFILE = {
   title: "Software Engineer",
   location: "Bengaluru, India",
   education: "B.E. CSE · VTU · 2026",
-  focus: "Software engineering · Full stack · Backend",
+  focus: "Full-stack · Backend · TypeScript",
   email: "mailto:dhanudeva80@gmail.com",
   emailText: "dhanudeva80@gmail.com",
   github: "https://github.com/devacharya80",
   discover: "https://github.com/devacharya80/Discover",
   linkedin: "https://www.linkedin.com/",
+  resume: "#resume",
 };
 
 export const NAV_ITEMS = [
@@ -20,29 +21,29 @@ export const NAV_ITEMS = [
 ];
 
 export const PROOF_ITEMS = [
-  { title: "2026", detail: "CSE graduate" },
+  { title: "B.E. CSE", detail: "VTU · 2026" },
   { title: "Full-stack", detail: "React · Node · TypeScript" },
   { title: "Backend", detail: "PostgreSQL · Prisma · APIs" },
-  { title: "DSA", detail: "Python · problem solving" },
+  { title: "DSA", detail: "Python · algorithms · problem solving" },
 ];
 
 export const PROJECTS = {
   featured: {
     number: "01",
-    label: "MAIN PROJECT",
+    label: "FEATURED PROJECT",
     name: "Discover",
-    lead: "A location-first company and job discovery platform built for students, freshers, and software engineers.",
+    lead: "A location-first company and job discovery platform for students, freshers, and software engineers.",
     bullets: [
-      "Interactive MapLibre company discovery with browser geolocation, distance-aware markers, search, and city/industry filtering.",
-      "Full job platform flow: applications, saved jobs, expiration, external application links, and recruiter/company management.",
-      "External job ingestion through Adzuna with normalization, validation, deduplication, company resolution, and direct application links.",
+      "Built interactive company discovery with MapLibre, browser geolocation, distance-aware markers, search, and city/industry filtering.",
+      "Implemented job workflows covering applications, saved jobs, expiration, external application links, and company/recruiter management.",
+      "Integrated external job ingestion with normalization, validation, deduplication, company resolution, and direct application links.",
     ],
     technologies: ["React 19", "TypeScript", "Node.js", "Express 5", "PostgreSQL", "Prisma 7", "MapLibre", "Docker", "GitHub Actions"],
     repo: "https://github.com/devacharya80/Discover",
   },
   placeholders: [
-    { number: "02", name: "Project placeholder", description: "Reserved for another project with a clear problem, implementation details, and source code.", tags: ["Add stack", "Add demo"] },
-    { number: "03", name: "Project placeholder", description: "Reserved for another project. Keep only work you can explain deeply in an interview.", tags: ["Add stack", "Add repo"] },
+    { number: "02", name: "Project placeholder", description: "Reserved for another strong project. Add a concise problem statement, your contribution, stack, and source/demo links.", tags: ["Add stack", "Add demo"] },
+    { number: "03", name: "Project placeholder", description: "Reserved for another strong project. Keep only work you can explain deeply in an interview.", tags: ["Add stack", "Add repo"] },
   ],
 };
 
