@@ -1,0 +1,4 @@
+export default function BuildSection() {
+  const lines = [["01","Define the actual user problem before choosing tools."],["02","Keep boundaries clear between UI, API, data, and auth."],["03","Write the boring pieces well: validation, errors, tests, migrations, CI."],["04","Keep enough technical context in the repo that another engineer can understand it."]];
+  return <section className="section-wrap"><div className="grid gap-9 bg-[#171717] p-[30px] text-white sm:p-[52px] lg:grid-cols-2 lg:gap-[70px]"><div><p className="eyebrow text-[#8e8e88]">HOW I THINK ABOUT PROJECTS</p><h2 className="section-title text-white">Problem → architecture → implementation → verification.</h2></div><div>{lines.map(([n,t]) => <p key={n} className="border-b border-white/15 py-[17px] text-sm text-[#d5d5ce]"><span className="mr-4 inline-block w-[22px] text-[11px] text-[#8c8c85]">{n}</span>{t}</p>)}</div></div></section>;
+}
