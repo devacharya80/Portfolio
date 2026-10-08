@@ -1,0 +1,1 @@
+Add verified SVG/PNG skill assets here. Filenames used by src/data/portfolio.ts should remain stable.
