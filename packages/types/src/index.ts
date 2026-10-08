@@ -1,0 +1,1 @@
+export type WorkspaceEntrySummary={id:string;title:string;updatedAt:string;assetCount:number};
