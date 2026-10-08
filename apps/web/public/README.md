@@ -1,0 +1,1 @@
+Public static assets: add verified profile photo, resume PDF, project screenshots, and skill icons here.
