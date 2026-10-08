@@ -1,0 +1,8 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+enum AssetType { DOCUMENT IMAGE OTHER }
+model AdminUser { id String @id @default(cuid()) email String @unique passwordHash String createdAt DateTime @default(now()) updatedAt DateTime @updatedAt sessions WorkspaceSession[] entries WorkspaceEntry[] }
+model WorkspaceSession { id String @id @default(cuid()) userId String tokenHash String @unique expiresAt DateTime createdAt DateTime @default(now()) user AdminUser @relation(fields:[userId],references:[id],onDelete:Cascade) }
+model WorkspaceEntry { id String @id @default(cuid()) userId String title String body String createdAt DateTime @default(now()) updatedAt DateTime @updatedAt user AdminUser @relation(fields:[userId],references:[id],onDelete:Cascade) assets WorkspaceAsset[] }
+model WorkspaceAsset { id String @id @default(cuid()) entryId String type AssetType originalName String storageKey String mimeType String sizeBytes Int createdAt DateTime @default(now()) entry WorkspaceEntry @relation(fields:[entryId],references:[id],onDelete:Cascade) }
+model PortfolioProject { id String @id @default(cuid()) title String slug String @unique description String imageUrl String? liveUrl String? repoUrl String? published Boolean @default(false) sortOrder Int @default(0) createdAt DateTime @default(now()) updatedAt DateTime @updatedAt }
