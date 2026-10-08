@@ -1,0 +1,1 @@
+import {Router} from "express";import {requireWorkspaceAuth} from "../middleware/auth.js";export const workspaceRouter=Router();workspaceRouter.use(requireWorkspaceAuth);workspaceRouter.get("/",(_,res)=>res.json({message:"Authenticated workspace"}));
